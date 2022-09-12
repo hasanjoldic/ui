@@ -1,0 +1,26 @@
+name: deploy static.enki.ba
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - services/static.enki.ba/**
+  pull_request:
+    branches: [main]
+    paths:
+      - services/static.enki.ba/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Restart container
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: | 
+            cd /home/${{ secrets.HETZNER_USER }}/enki.ba && git pull
+            cd /home/${{ secrets.HETZNER_USER }}/enki.ba/services/static.enki.ba && docker-compose up --build --detach
+          host: ${{ secrets.HETZNER_HOST }}
+          username: ${{ secrets.HETZNER_USER }}
+          privateKey: ${{ secrets.HETZNER_PRIVATE_KEY }}

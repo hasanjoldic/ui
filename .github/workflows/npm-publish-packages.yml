@@ -1,0 +1,55 @@
+name: Publish Node.js Package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  AWS_REGION: eu-central-1
+  AWS_ACCOUNT_ID: 878492176230
+  AWS_CODEARTIFACT_REPOSITORY: enki.ba
+  AWS_CODEARTIFACT_DOMAIN: enki
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci --ignore-scripts
+      - run: npm test
+
+  version:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Configure Git User
+        run: |
+          git config --global user.email "ci@enki.ba"
+          git config --global user.name "ci@$GITHUB_ACTOR"
+      - run: npm ci --ignore-scripts
+      - run: HUSKY=0 npm run lerna:version
+
+  publish-npm:
+    needs: version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci --ignore-scripts
+      - run: npm run lerna bootstrap
+      - run: npm run lerna -- run build
+      - run: HUSKY=0 npm run lerna:publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
