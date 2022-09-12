@@ -1,0 +1,25 @@
+{
+  "name": "@hasan.joldic/theme",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
+    "build": "tsc"
+  },
+  "author": "Hasan Joldic <hasan.joldic@enki.ba> (https://enki.ba/)",
+  "license": "MIT",
+  "peerDependencies": {
+    "@babel/core": "^7.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@mui/icons-material": "^5.0.0",
+    "@mui/material": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
