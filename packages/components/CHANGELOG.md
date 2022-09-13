@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.3.0...@hasan.joldic/components@0.3.1) (2022-09-13)
+
+
+### Bug Fixes
+
+* **components:** export from page dir ([5a71789](https://github.com/hasanjoldic/ui/commit/5a717890ff6f4a3622f65e691445a7cfbf162724))
+
+
+
+
+
 # [0.3.0](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.2.6...@hasan.joldic/components@0.3.0) (2022-09-13)
 
 
