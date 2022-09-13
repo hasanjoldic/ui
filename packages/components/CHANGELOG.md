@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.2.5...@hasan.joldic/components@0.2.6) (2022-09-13)
+
+
+### Bug Fixes
+
+* **components:** exclude storybook files from build ([be9ccbe](https://github.com/hasanjoldic/ui/commit/be9ccbe3ea3d8d8228ceb0c4da5863ff143a8425))
+
+
+
+
+
 ## [0.2.5](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.2.4...@hasan.joldic/components@0.2.5) (2022-09-13)
 
 **Note:** Version bump only for package @hasan.joldic/components
