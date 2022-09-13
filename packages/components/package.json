@@ -1,6 +1,6 @@
 {
   "name": "@hasan.joldic/components",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Shared components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
