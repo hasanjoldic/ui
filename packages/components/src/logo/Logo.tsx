@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Img: React.FC<{ url: string }> = ({ url }) => (
-  <img src={url} width={50} height={50} />
+  <img src={url} width="auto" height={40} />
 );
 
 export const Logo: React.FC<Props> = ({ variant = "img" }) => {
