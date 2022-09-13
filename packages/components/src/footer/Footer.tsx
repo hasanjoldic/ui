@@ -2,13 +2,14 @@ import React from "react";
 
 import styled from "@mui/material/styles/styled";
 import Box from "@mui/material/Box";
-import { default as MuiContainer } from "@mui/material/Container";
 
 import { Logo } from "../logo";
 
-const Container = styled(MuiContainer)(({ theme }) => ({
+const Container = styled(Box)(({ theme }) => ({
   boxShadow: theme.shadows[1],
   padding: theme.spacing(1),
+  display: "flex",
+  justifyContent: "center",
 }));
 
 export const Footer: React.FC = () => {

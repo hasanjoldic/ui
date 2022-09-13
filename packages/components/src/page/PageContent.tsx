@@ -5,7 +5,10 @@ import Box from "@mui/material/Box";
 
 const Container = styled(Box)(({ theme }) => ({
   flexGrow: 1,
-  p: theme.spacing(2, 4),
+  padding: theme.spacing(2, 4),
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
 }));
 
 export const PageContent: React.FC<React.PropsWithChildren> = ({

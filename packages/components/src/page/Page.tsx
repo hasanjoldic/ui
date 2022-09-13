@@ -8,7 +8,7 @@ import { Footer } from "../footer";
 import { PageContent } from "./PageContent";
 
 const Container = styled(Box)(() => ({
-  minWidth: "100vw",
+  width: "100vw",
   minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
