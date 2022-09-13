@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.2.3...@hasan.joldic/components@0.2.4) (2022-09-13)
+
+
+### Bug Fixes
+
+* **components:** publish ([356cb3f](https://github.com/hasanjoldic/ui/commit/356cb3f5e85dffc8cfd2117cfed9210b2ae35eca))
+
+
+
+
+
 ## [0.2.3](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.2.2...@hasan.joldic/components@0.2.3) (2022-09-13)
 
 **Note:** Version bump only for package @hasan.joldic/components
