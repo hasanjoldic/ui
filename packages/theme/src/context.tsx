@@ -1,13 +1,11 @@
 import { createContext, useContext, useState, useEffect, useMemo } from "react";
 
 import muiCreateTheme from "@mui/material/styles/createTheme";
-import type { PaletteMode as MuiPaletteMode } from "@mui/material";
+import type { PaletteMode } from "@mui/material";
 import type { ThemeOptions } from "@mui/material/styles/createTheme";
 import MuiThemeProvider from "@mui/material/styles/ThemeProvider";
 
-import { useSystemPaletteMode } from "./paletteMode";
-
-export type PaletteMode = "system" | MuiPaletteMode;
+// import { useSystemPaletteMode } from "./paletteMode";
 
 export interface Theme {
   paletteMode: PaletteMode;
@@ -15,7 +13,7 @@ export interface Theme {
 }
 
 const ThemeContext = createContext<Theme>({
-  paletteMode: "system",
+  paletteMode: "light",
   setPaletteMode: () => {},
 });
 
@@ -30,17 +28,19 @@ export interface ThemeProviderProps extends React.PropsWithChildren {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   themeOptions,
-  paletteMode: propsPaletteMode = "system",
+  paletteMode: propsPaletteMode = "light",
   children,
 }) => {
-  const systemPaletteMode = useSystemPaletteMode();
+  // const systemPaletteMode = useSystemPaletteMode();
 
   const [paletteMode, setPaletteMode] = useState<PaletteMode>(propsPaletteMode);
 
   const theme = useMemo(() => {
-    const mode = getMode(paletteMode, systemPaletteMode);
-    return createTheme(themeOptions, mode);
-  }, [paletteMode, systemPaletteMode, themeOptions]);
+    // const mode = getMode(paletteMode, systemPaletteMode);
+    // return createTheme(themeOptions, mode);
+
+    return createTheme(themeOptions, paletteMode);
+  }, [paletteMode, themeOptions]);
 
   useEffect(() => {
     const initialPaletteMode = getInitialPaletteMode(propsPaletteMode);
@@ -52,7 +52,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
 
   useEffect(() => {
     setCookie("paletteMode", paletteMode);
-  }, [systemPaletteMode, paletteMode]);
+  }, [paletteMode]);
 
   return (
     <ThemeContext.Provider value={{ paletteMode, setPaletteMode }}>
@@ -61,11 +61,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   );
 };
 
-function getMode(paletteMode: PaletteMode, systemPaletteMode: MuiPaletteMode) {
-  return paletteMode === "system" ? systemPaletteMode : paletteMode;
-}
+// function getMode(paletteMode: PaletteMode, systemPaletteMode: MuiPaletteMode) {
+//   return paletteMode === "system" ? systemPaletteMode : paletteMode;
+// }
 
-function createTheme(themeOptions: ThemeOptions, mode: MuiPaletteMode) {
+function createTheme(themeOptions: ThemeOptions, mode: PaletteMode) {
   return muiCreateTheme({
     ...themeOptions,
     palette: {

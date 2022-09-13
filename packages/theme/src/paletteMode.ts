@@ -1,35 +1,35 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
-import type { PaletteMode as MuiPaletteMode } from "@mui/material";
+// import type { PaletteMode as MuiPaletteMode } from "@mui/material";
 
-function getDarkPaletteModeMQ() {
-  if (typeof window === "undefined") return;
+// function getDarkPaletteModeMQ() {
+//   if (typeof window === "undefined") return;
 
-  return window.matchMedia("(prefers-color-scheme:dark)");
-}
+//   return window.matchMedia("(prefers-color-scheme:dark)");
+// }
 
-export function useSystemPaletteMode() {
-  const [systemPaletteMode, setSystemPaletteMode] =
-    useState<MuiPaletteMode>("light");
+// export function useSystemPaletteMode() {
+//   const [systemPaletteMode, setSystemPaletteMode] =
+//     useState<MuiPaletteMode>("light");
 
-  useEffect(() => {
-    const darkPaletteModeMQ = getDarkPaletteModeMQ();
+//   useEffect(() => {
+//     const darkPaletteModeMQ = getDarkPaletteModeMQ();
 
-    const listener = (e: MediaQueryListEventMap["change"]) => {
-      setSystemPaletteMode(getSystemPaletteMode(e.matches));
-    };
+//     const listener = (e: MediaQueryListEventMap["change"]) => {
+//       setSystemPaletteMode(getSystemPaletteMode(e.matches));
+//     };
 
-    if (!darkPaletteModeMQ) return;
+//     if (!darkPaletteModeMQ) return;
 
-    setSystemPaletteMode(getSystemPaletteMode(darkPaletteModeMQ.matches));
+//     setSystemPaletteMode(getSystemPaletteMode(darkPaletteModeMQ.matches));
 
-    darkPaletteModeMQ.addEventListener("change", listener);
-    return () => darkPaletteModeMQ.removeEventListener("change", listener);
-  }, []);
+//     darkPaletteModeMQ.addEventListener("change", listener);
+//     return () => darkPaletteModeMQ.removeEventListener("change", listener);
+//   }, []);
 
-  return systemPaletteMode;
-}
+//   return systemPaletteMode;
+// }
 
-function getSystemPaletteMode(isDark: boolean) {
-  return isDark ? "dark" : "light";
-}
+// function getSystemPaletteMode(isDark: boolean) {
+//   return isDark ? "dark" : "light";
+// }

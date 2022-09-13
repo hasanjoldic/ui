@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import type { PaletteMode } from "@mui/material";
+
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -7,9 +9,9 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 
 import DarkMode from "@mui/icons-material/DarkMode";
 import LightMode from "@mui/icons-material/LightMode";
-import SettingsBrightness from "@mui/icons-material/SettingsBrightness";
+// import SettingsBrightness from "@mui/icons-material/SettingsBrightness";
 
-import { PaletteMode, useTheme } from "../context";
+import { useTheme } from "../context";
 
 export const PaletteModeButton: React.FC = () => {
   const { paletteMode, setPaletteMode } = useTheme();
@@ -32,7 +34,7 @@ export const PaletteModeButton: React.FC = () => {
   return (
     <>
       <IconButton onClick={handleOpen}>
-        {paletteMode === "system" && <SettingsBrightness />}
+        {/* {paletteMode === "system" && <SettingsBrightness />} */}
         {paletteMode === "light" && <LightMode />}
         {paletteMode === "dark" && <DarkMode />}
       </IconButton>
@@ -42,12 +44,12 @@ export const PaletteModeButton: React.FC = () => {
         open={!!anchorEl}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleChange("system")}>
+        {/* <MenuItem onClick={handleChange("system")}>
           <ListItemIcon>
             <SettingsBrightness />
           </ListItemIcon>
           System
-        </MenuItem>
+        </MenuItem> */}
         <MenuItem onClick={handleChange("light")}>
           <ListItemIcon>
             <LightMode />
