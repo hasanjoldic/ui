@@ -9,6 +9,7 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo",
     "build": "tsc",
     "storybook": "start-storybook -p 6006",
+    "prepublish": "npm run build",
     "build-storybook": "build-storybook"
   },
   "author": "Hasan Joldic <hasan@hasanjoldic.com> (https://hasanjoldic.com/)",
