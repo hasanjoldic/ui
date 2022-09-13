@@ -1,6 +1,9 @@
 node_modules
-tsconfig.tsbuildinfo
 
+tsconfig.tsbuildinfo
 dist
 
 src
+tsconfig.json
+
+.storybook
