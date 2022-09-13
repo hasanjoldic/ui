@@ -14,13 +14,14 @@ const Container = styled(Box)(() => ({
   flexDirection: "column",
 }));
 
-interface Props extends React.ComponentProps<typeof AppBar> {}
+interface Props
+  extends React.PropsWithChildren<React.ComponentProps<typeof AppBar>> {}
 
-export const Page: React.FC<Props> = ({ pages, onNavigate }) => {
+export const Page: React.FC<Props> = ({ pages, onNavigate, children }) => {
   return (
     <Container>
       <AppBar pages={pages} onNavigate={onNavigate} />
-      <PageContent />
+      <PageContent>{children}</PageContent>
       <Footer />
     </Container>
   );
