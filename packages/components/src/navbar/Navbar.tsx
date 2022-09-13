@@ -2,22 +2,23 @@ import React from "react";
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import styled from "@mui/material/styles/styled";
 
 import { PaletteModeButton } from "@hasan.joldic/theme";
 
 import { Logo } from "../logo";
-// import { styles } from "../../utils";
+
+const Container = styled("div")(({ theme }) => ({
+  boxShadow: theme.shadows[1],
+  padding: theme.spacing(4, 2),
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+}));
 
 export const Navbar: React.FC = () => {
   return (
-    <Box
-      px={4}
-      py={2}
-      display="flex"
-      justifyContent="space-between"
-      alignItems="center"
-      // borderBottom={styles.shadow.default}
-    >
+    <Container>
       <Box display="flex" alignItems="center">
         <Box mr={2}>
           <Logo variant="link" />
@@ -28,6 +29,6 @@ export const Navbar: React.FC = () => {
       </Box>
 
       <PaletteModeButton />
-    </Box>
+    </Container>
   );
 };
