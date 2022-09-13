@@ -9,7 +9,7 @@
     "postinstall": "husky install",
     "test": "echo \"Error: TODO add tests\"",
     "clean": "lerna run clean && lerna clean --yes && rm -rf node_modules",
-    "lerna:version": "lerna version --yes",
+    "lerna:version": "HUSKY=0 lerna version --yes",
     "lerna:publish": "lerna publish from-package --yes"
   },
   "devDependencies": {
