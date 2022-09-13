@@ -1,0 +1,38 @@
+{
+  "name": "@hasan.joldic/components",
+  "version": "0.1.0",
+  "description": "Shared components",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
+    "build": "tsc",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "author": "Hasan Joldic <hasan@hasanjoldic.com> (https://hasanjoldic.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@hasan.joldic/theme": "^0.2.1",
+    "@mui/material": "^5.10.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@storybook/addon-actions": "^6.5.11",
+    "@storybook/addon-essentials": "^6.5.11",
+    "@storybook/addon-interactions": "^6.5.11",
+    "@storybook/addon-links": "^6.5.11",
+    "@storybook/builder-webpack4": "^6.5.11",
+    "@storybook/manager-webpack4": "^6.5.11",
+    "@storybook/react": "^6.5.11",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^18.0.19",
+    "@types/react-dom": "^18.0.6",
+    "babel-loader": "^8.2.5"
+  }
+}
