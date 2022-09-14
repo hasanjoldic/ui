@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.6](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/theme@0.3.5...@hasan.joldic/theme@0.3.6) (2022-09-14)
+
+
+### Bug Fixes
+
+* **theme:** set correct Path of cookie ([d083f5d](https://github.com/hasanjoldic/ui/commit/d083f5dc5f83f3cd4307d30cb02b8698eb4a981b))
+
+
+
+
+
 ## [0.3.5](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/theme@0.3.4...@hasan.joldic/theme@0.3.5) (2022-09-14)
 
 
