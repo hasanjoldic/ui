@@ -84,7 +84,7 @@ function getCookie(name: string) {
 }
 
 function setCookie(name: string, value: string) {
-  document.cookie = `${name}=${value}; Domain=.${getDomain()}; SameSite=strict; max-age=31536000`;
+  document.cookie = `${name}=${value}; Domain=.${getDomain()}; Path=/; SameSite=strict; max-age=31536000`;
 }
 
 function deleteCookie(name: string) {
