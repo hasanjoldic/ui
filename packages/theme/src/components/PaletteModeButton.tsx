@@ -11,7 +11,7 @@ import DarkMode from "@mui/icons-material/DarkMode";
 import LightMode from "@mui/icons-material/LightMode";
 // import SettingsBrightness from "@mui/icons-material/SettingsBrightness";
 
-import { useTheme } from "../context";
+import { useTheme } from "../ThemeProvider";
 
 export const PaletteModeButton: React.FC = () => {
   const { paletteMode, setPaletteMode } = useTheme();

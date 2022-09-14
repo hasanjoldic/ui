@@ -1,4 +1,4 @@
 export { PaletteModeButton } from "./components";
 
-export { ThemeProvider, useTheme } from "./context";
-export type { ThemeProviderProps } from "./context";
+export { ThemeProvider, useTheme } from "./ThemeProvider";
+export type { ThemeProviderProps } from "./ThemeProvider";

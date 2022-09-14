@@ -5,8 +5,6 @@ import type { PaletteMode } from "@mui/material";
 import type { ThemeOptions } from "@mui/material/styles/createTheme";
 import MuiThemeProvider from "@mui/material/styles/ThemeProvider";
 
-// import { useSystemPaletteMode } from "./paletteMode";
-
 export interface Theme {
   paletteMode: PaletteMode;
   setPaletteMode: (paletteMode: PaletteMode) => void;
@@ -21,38 +19,30 @@ export const useTheme = () => {
   return useContext(ThemeContext);
 };
 
+const initialPaletteMode = (getCookie("paletteMode") as PaletteMode) || "light";
+
 export interface ThemeProviderProps extends React.PropsWithChildren {
-  themeOptions: ThemeOptions;
-  paletteMode?: PaletteMode;
+  themeOptions?: ThemeOptions;
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   themeOptions,
-  paletteMode: propsPaletteMode = "light",
   children,
 }) => {
-  // const systemPaletteMode = useSystemPaletteMode();
-
-  const [paletteMode, setPaletteMode] = useState<PaletteMode>(propsPaletteMode);
+  const [paletteMode, setPaletteMode] =
+    useState<PaletteMode>(initialPaletteMode);
 
   const theme = useMemo(() => {
-    // const mode = getMode(paletteMode, systemPaletteMode);
-    // return createTheme(themeOptions, mode);
-
     return createTheme(themeOptions, paletteMode);
   }, [paletteMode, themeOptions]);
 
   useEffect(() => {
-    const initialPaletteMode = getInitialPaletteMode(propsPaletteMode);
-
-    if (initialPaletteMode !== propsPaletteMode) {
-      setPaletteMode(initialPaletteMode);
+    if (paletteMode) {
+      setCookie("paletteMode", paletteMode);
     }
-  }, []);
-
-  useEffect(() => {
-    setCookie("paletteMode", paletteMode);
   }, [paletteMode]);
+
+  console.log(theme.palette.mode);
 
   return (
     <ThemeContext.Provider value={{ paletteMode, setPaletteMode }}>
@@ -61,11 +51,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   );
 };
 
-// function getMode(paletteMode: PaletteMode, systemPaletteMode: MuiPaletteMode) {
-//   return paletteMode === "system" ? systemPaletteMode : paletteMode;
-// }
+function createTheme(themeOptions?: ThemeOptions, mode?: PaletteMode) {
+  themeOptions = themeOptions ?? {};
+  mode = mode ?? "light";
 
-function createTheme(themeOptions: ThemeOptions, mode: PaletteMode) {
   return muiCreateTheme({
     ...themeOptions,
     palette: {
@@ -99,10 +88,4 @@ function setCookie(name: string, value: string) {
 
 function deleteCookie(name: string) {
   document.cookie = `${name}=; Max-Age=0`;
-}
-
-function getInitialPaletteMode(paletteMode?: PaletteMode): PaletteMode {
-  const initialPaletteMode: PaletteMode =
-    paletteMode || (getCookie("paletteMode") as PaletteMode) || "system";
-  return initialPaletteMode;
 }
