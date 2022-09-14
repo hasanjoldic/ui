@@ -9,13 +9,30 @@ import { ThemeContext } from "./hooks";
 
 export interface ThemeProviderProps extends React.PropsWithChildren {
   themeOptions?: ThemeOptions;
+  paletteMode?: PaletteMode;
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   themeOptions,
+  paletteMode: propsPaletteMode,
   children,
 }) => {
-  const [paletteMode, setPaletteMode] = useState<PaletteMode>("light");
+  const initialPaletteMode = useMemo(() => {
+    if (propsPaletteMode) return propsPaletteMode;
+
+    const isCSR =
+      document && !document?.querySelector(".HJ-ThemeProvider-container");
+
+    if (isCSR) {
+      const paletteMode = getCookie("paletteMode") as PaletteMode;
+      if (paletteMode) return paletteMode;
+    }
+
+    return "light";
+  }, []);
+
+  const [paletteMode, setPaletteMode] =
+    useState<PaletteMode>(initialPaletteMode);
 
   const theme = useMemo(() => {
     return createTheme(themeOptions, paletteMode);
@@ -27,17 +44,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     }
   }, [paletteMode]);
 
-  useEffect(() => {
-    const initialPaletteMode =
-      (getCookie("paletteMode") as PaletteMode) || "light";
-
-    setPaletteMode(initialPaletteMode);
-  }, [setPaletteMode]);
-
   return (
-    <ThemeContext.Provider value={{ paletteMode, setPaletteMode }}>
-      <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>
-    </ThemeContext.Provider>
+    <div className="HJ-ThemeProvider-container">
+      <ThemeContext.Provider value={{ paletteMode, setPaletteMode }}>
+        <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>
+      </ThemeContext.Provider>
+    </div>
   );
 };
 
