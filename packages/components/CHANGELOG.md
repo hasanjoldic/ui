@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.3.3...@hasan.joldic/components@0.3.4) (2022-09-14)
+
+
+### Bug Fixes
+
+* **components:** page content width property ([bb1e938](https://github.com/hasanjoldic/ui/commit/bb1e9387ab1d649b36edbf116f5eb5c14e83a2f8))
+
+
+
+
+
 ## [0.3.3](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.3.2...@hasan.joldic/components@0.3.3) (2022-09-13)
 
 
