@@ -20,12 +20,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   const initialPaletteMode = useMemo(() => {
     if (propsPaletteMode) return propsPaletteMode;
 
-    const isCSR =
-      document && !document?.querySelector(".HJ-ThemeProvider-container");
-
-    if (isCSR) {
-      const paletteMode = getCookie("paletteMode") as PaletteMode;
-      if (paletteMode) return paletteMode;
+    if (typeof document !== "undefined") {
+      const isCSR = !document?.querySelector(".HJ-ThemeProvider-container");
+      if (isCSR) {
+        const paletteMode = getCookie("paletteMode") as PaletteMode;
+        if (paletteMode) return paletteMode;
+      }
     }
 
     return "light";
