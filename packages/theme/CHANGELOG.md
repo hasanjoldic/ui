@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/theme@0.3.3...@hasan.joldic/theme@0.3.4) (2022-09-14)
+
+
+### Bug Fixes
+
+* **theme:** share cookie with subdomains ([dda19ee](https://github.com/hasanjoldic/ui/commit/dda19eee7414a61349d996679d29574d5de0f93f))
+
+
+
+
+
 ## [0.3.3](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/theme@0.3.2...@hasan.joldic/theme@0.3.3) (2022-09-14)
 
 **Note:** Version bump only for package @hasan.joldic/theme
