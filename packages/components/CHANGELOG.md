@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.5](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.3.4...@hasan.joldic/components@0.3.5) (2022-09-14)
+
+
+### Bug Fixes
+
+* **components:** set logo to link variant in appbar ([f24cc76](https://github.com/hasanjoldic/ui/commit/f24cc76a0fb782af621eaa9d3522fcb2eae6239f))
+
+
+
+
+
 ## [0.3.4](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.3.3...@hasan.joldic/components@0.3.4) (2022-09-14)
 
 
