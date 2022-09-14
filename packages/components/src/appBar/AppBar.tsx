@@ -3,7 +3,6 @@ import React from "react";
 import { default as MuiAppBar } from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 
 import { PaletteModeButton } from "@hasan.joldic/theme";
@@ -20,31 +19,27 @@ export const AppBar: React.FC<Props> = ({ pages, onNavigate }) => {
 
   return (
     <MuiAppBar position="static" color="transparent">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <DrawerButton pages={pages} onNavigate={onNavigate} />
+      <Toolbar disableGutters>
+        <DrawerButton pages={pages} onNavigate={onNavigate} />
 
-          <LogoAndTitle />
+        <LogoAndTitle />
 
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "center",
-            }}
-          >
-            {pages.map(({ path, label }) => (
-              <Button key={path} onClick={handleNavigate(path)}>
-                {label}
-              </Button>
-            ))}
-          </Box>
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: { xs: "none", md: "flex" },
+            justifyContent: "center",
+          }}
+        >
+          {pages.map(({ path, label }) => (
+            <Button key={path} onClick={handleNavigate(path)}>
+              {label}
+            </Button>
+          ))}
+        </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <PaletteModeButton />
-          </Box>
-        </Toolbar>
-      </Container>
+        <PaletteModeButton />
+      </Toolbar>
     </MuiAppBar>
   );
 };

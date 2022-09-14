@@ -17,7 +17,6 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@hasan.joldic/theme": "^0.3.1",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.5",
     "react": "^18.2.0",
@@ -36,6 +35,9 @@
     "@types/react": "^18.0.19",
     "@types/react-dom": "^18.0.6",
     "babel-loader": "^8.2.5"
+  },
+  "peerDependencies": {
+    "@hasan.joldic/theme": "^0.0.0"
   },
   "publishConfig": {
     "access": "public"
