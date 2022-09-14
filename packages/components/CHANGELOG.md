@@ -5,6 +5,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.3.8](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.3.7...@hasan.joldic/components@0.3.8) (2022-09-14)
 
+
+### Bug Fixes
+
+* **theme:** ssr hydration ([b189b6a](https://github.com/hasanjoldic/ui/commit/b189b6ab67f1c51269da3658b7ce062c1f348eec))
+
+
+
+
+
+## [0.3.8](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.3.7...@hasan.joldic/components@0.3.8) (2022-09-14)
+
 **Note:** Version bump only for package @hasan.joldic/components
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/theme@0.3.1...@hasan.joldic/theme@0.3.2) (2022-09-14)
+
+
+### Bug Fixes
+
+* **theme:** ssr hydration ([b189b6a](https://github.com/hasanjoldic/ui/commit/b189b6ab67f1c51269da3658b7ce062c1f348eec))
+
+
+
+
+
 ## [0.3.1](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/theme@0.3.0...@hasan.joldic/theme@0.3.1) (2022-09-14)
 
 **Note:** Version bump only for package @hasan.joldic/theme
