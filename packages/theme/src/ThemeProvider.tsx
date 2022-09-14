@@ -1,23 +1,11 @@
-import { createContext, useContext, useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 import muiCreateTheme from "@mui/material/styles/createTheme";
 import type { PaletteMode } from "@mui/material";
 import type { ThemeOptions } from "@mui/material/styles/createTheme";
 import MuiThemeProvider from "@mui/material/styles/ThemeProvider";
 
-export interface Theme {
-  paletteMode: PaletteMode;
-  setPaletteMode: (paletteMode: PaletteMode) => void;
-}
-
-const ThemeContext = createContext<Theme>({
-  paletteMode: "light",
-  setPaletteMode: () => {},
-});
-
-export const useTheme = () => {
-  return useContext(ThemeContext);
-};
+import { ThemeContext } from "./hooks";
 
 const initialPaletteMode = (getCookie("paletteMode") as PaletteMode) || "light";
 
@@ -41,8 +29,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       setCookie("paletteMode", paletteMode);
     }
   }, [paletteMode]);
-
-  console.log(theme.palette.mode);
 
   return (
     <ThemeContext.Provider value={{ paletteMode, setPaletteMode }}>

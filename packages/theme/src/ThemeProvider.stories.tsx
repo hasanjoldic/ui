@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { ThemeProvider } from "./ThemeProvider";
+import { PaletteModeButton } from "./components";
 
 export default {
   title: "ThemeProvider",
@@ -12,8 +13,10 @@ export default {
 
 export const Template: ComponentStory<typeof ThemeProvider> = () => (
   <ThemeProvider>
-    <Box width="100vw" height="100vh"></Box>
-    <Button>Test</Button>
+    <Box width="100vw" height="100vh">
+      <PaletteModeButton></PaletteModeButton>
+      <Button>Test</Button>
+    </Box>
   </ThemeProvider>
 );
 
