@@ -67,12 +67,11 @@ function createTheme(themeOptions?: ThemeOptions, mode?: PaletteMode) {
 }
 
 function getDomain() {
-  // developer.mozilla.org
-  const hostname = window.location.hostname;
+  const hostname = window.location.hostname; // developer.mozilla.org
 
-  const domains = hostname.split(".");
-  // mozilla.ord
-  return domains.slice(domains.length - 2).join(".");
+  const domains = hostname.split("."); // ["developer", "mozilla", "org"]
+
+  return domains.slice(domains.length - 2).join("."); // mozilla.org
 }
 
 function getCookie(name: string) {
@@ -85,7 +84,7 @@ function getCookie(name: string) {
 }
 
 function setCookie(name: string, value: string) {
-  document.cookie = `${name}=${value}; Domain=${getDomain()}; SameSite=strict; max-age=31536000`;
+  document.cookie = `${name}=${value}; Domain=.${getDomain()}; SameSite=strict; max-age=31536000`;
 }
 
 function deleteCookie(name: string) {
