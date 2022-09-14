@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.5](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/theme@0.3.4...@hasan.joldic/theme@0.3.5) (2022-09-14)
+
+
+### Bug Fixes
+
+* **theme:** check if document is defined ([c0d1aa6](https://github.com/hasanjoldic/ui/commit/c0d1aa69b08d1ffe7b166e13927dbc0eb0b52a30))
+
+
+
+
+
 ## [0.3.4](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/theme@0.3.3...@hasan.joldic/theme@0.3.4) (2022-09-14)
 
 
