@@ -15,7 +15,7 @@ export const LogoAndTitle: React.FC = () => {
       alignItems="center"
     >
       <Box mr={2}>
-        <Logo />
+        <Logo variant="link" />
       </Box>
       <Typography variant="h5" noWrap>
         Hasan Joldic

@@ -31,6 +31,8 @@ export const DrawerButton: React.FC<Props> = ({ pages, onNavigate }) => {
     onNavigate(path);
   };
 
+  if (!pages?.length) return null;
+
   return (
     <Box sx={{ display: { xs: "flex", md: "none" } }}>
       <IconButton size="large" onClick={handleOpen}>
