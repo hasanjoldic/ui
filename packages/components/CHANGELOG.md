@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.3.13...@hasan.joldic/components@0.4.0) (2022-09-17)
+
+
+### Features
+
+* **components:** add form fields ([de5d815](https://github.com/hasanjoldic/ui/commit/de5d8154cfa674daf9c442e300ef56cf401e8b16))
+
+
+
+
+
 ## [0.3.13](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.3.12...@hasan.joldic/components@0.3.13) (2022-09-17)
 
 **Note:** Version bump only for package @hasan.joldic/components
