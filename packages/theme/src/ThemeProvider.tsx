@@ -63,6 +63,16 @@ function createTheme(themeOptions?: ThemeOptions, mode?: PaletteMode) {
       ...themeOptions.palette,
       mode,
     },
+    components: {
+      MuiPaper: {
+        styleOverrides: {
+          elevation1: {
+            boxShadow: "none",
+            border: "1px solid rgba(0,0,0,0.1)",
+          },
+        },
+      },
+    },
   });
 }
 
