@@ -18,7 +18,7 @@ export const AppBar: React.FC<Props> = ({ pages, onNavigate }) => {
   };
 
   return (
-    <MuiAppBar position="static" color="transparent">
+    <MuiAppBar position="static" color="transparent" elevation={1} square>
       <Toolbar disableGutters>
         <DrawerButton pages={pages} onNavigate={onNavigate} />
 
