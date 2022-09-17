@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.7](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/theme@0.3.6...@hasan.joldic/theme@0.3.7) (2022-09-17)
+
+**Note:** Version bump only for package @hasan.joldic/theme
+
+
+
+
+
 ## [0.3.6](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/theme@0.3.5...@hasan.joldic/theme@0.3.6) (2022-09-14)
 
 
