@@ -18,7 +18,12 @@ export const LogoAndTitle: React.FC = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Link underline="none" color="inherit" onClick={() => onNavigate("/")}>
+      <Link
+        href="#"
+        underline="none"
+        color="inherit"
+        onClick={() => onNavigate("/")}
+      >
         <Box display="flex" alignItems="center">
           <Box mr={2}>
             <Logo />

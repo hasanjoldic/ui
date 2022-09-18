@@ -2,6 +2,8 @@ import React from "react";
 
 import useTheme from "@mui/material/styles/useTheme";
 
+import { usePageContext } from "../page/context";
+
 interface Props {
   variant?: "img" | "link";
 }
@@ -12,6 +14,7 @@ const Img: React.FC<{ url: string }> = ({ url }) => (
 
 export const Logo: React.FC<Props> = ({ variant = "img" }) => {
   const theme = useTheme();
+  const { onNavigate } = usePageContext();
 
   const url =
     "https://static.hasanjoldic.com/hasanjoldic.com/" +
@@ -22,7 +25,7 @@ export const Logo: React.FC<Props> = ({ variant = "img" }) => {
   }
 
   return (
-    <a href="/">
+    <a href="#" onClick={() => onNavigate("/")}>
       <Img url={url} />
     </a>
   );
