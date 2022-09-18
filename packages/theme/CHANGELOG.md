@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/theme@0.3.7...@hasan.joldic/theme@0.4.0) (2022-09-18)
+
+
+### Features
+
+* **theme:** only pass cookies to theme props ([5fc91f1](https://github.com/hasanjoldic/ui/commit/5fc91f1ad27a4d1824e913ab024faf6b12b8a9bc))
+
+
+
+
+
 ## [0.3.7](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/theme@0.3.6...@hasan.joldic/theme@0.3.7) (2022-09-17)
 
 **Note:** Version bump only for package @hasan.joldic/theme
