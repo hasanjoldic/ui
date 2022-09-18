@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.4.3...@hasan.joldic/components@0.4.4) (2022-09-18)
+
+
+### Bug Fixes
+
+* **components:** use navigation from context in links ([a26ce77](https://github.com/hasanjoldic/ui/commit/a26ce77015eeec40ca3202ae512bb05773af8d75))
+
+
+
+
+
 ## [0.4.3](https://github.com/hasanjoldic/ui/compare/@hasan.joldic/components@0.4.2...@hasan.joldic/components@0.4.3) (2022-09-18)
 
 **Note:** Version bump only for package @hasan.joldic/components
