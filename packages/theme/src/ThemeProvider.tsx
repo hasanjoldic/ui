@@ -7,25 +7,39 @@ import MuiThemeProvider from "@mui/material/styles/ThemeProvider";
 
 import { ThemeContext } from "./hooks";
 
+const themeOptions = {
+  components: {
+    MuiPaper: {
+      styleOverrides: {
+        elevation1: {
+          boxShadow: "none",
+          border: "1px solid rgba(0,0,0,0.1)",
+        },
+      },
+    },
+  },
+};
+
 export interface ThemeProviderProps extends React.PropsWithChildren {
-  themeOptions?: ThemeOptions;
-  paletteMode?: PaletteMode;
+  cookies: string | undefined;
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
-  themeOptions,
-  paletteMode: propsPaletteMode,
+  cookies,
   children,
 }) => {
-  const initialPaletteMode = useMemo(() => {
-    if (propsPaletteMode) return propsPaletteMode;
+  const initialPaletteMode = useMemo<PaletteMode>(() => {
+    // if (typeof document !== "undefined") {
+    //   const isCSR = !document?.querySelector(".HJ-ThemeProvider-container");
+    //   if (isCSR) {
+    //     const paletteMode = getCookie("paletteMode") as PaletteMode;
+    //     if (paletteMode) return paletteMode;
+    //   }
+    // }
 
-    if (typeof document !== "undefined") {
-      const isCSR = !document?.querySelector(".HJ-ThemeProvider-container");
-      if (isCSR) {
-        const paletteMode = getCookie("paletteMode") as PaletteMode;
-        if (paletteMode) return paletteMode;
-      }
+    const cookiePaletteMode = getCookieValue(cookies, "paletteMode");
+    if (cookiePaletteMode === "light" || cookiePaletteMode === "dark") {
+      return cookiePaletteMode;
     }
 
     return "light";
@@ -36,7 +50,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
 
   const theme = useMemo(() => {
     return createTheme(themeOptions, paletteMode);
-  }, [paletteMode, themeOptions]);
+  }, [paletteMode]);
 
   useEffect(() => {
     if (paletteMode) {
@@ -53,25 +67,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   );
 };
 
-function createTheme(themeOptions?: ThemeOptions, mode?: PaletteMode) {
-  themeOptions = themeOptions ?? {};
-  mode = mode ?? "light";
-
+function createTheme(themeOptions: ThemeOptions, mode: PaletteMode) {
   return muiCreateTheme({
     ...themeOptions,
     palette: {
       ...themeOptions.palette,
       mode,
-    },
-    components: {
-      MuiPaper: {
-        styleOverrides: {
-          elevation1: {
-            boxShadow: "none",
-            border: "1px solid rgba(0,0,0,0.1)",
-          },
-        },
-      },
     },
   });
 }
@@ -87,9 +88,13 @@ function getDomain() {
 function getCookie(name: string) {
   if (typeof document === "undefined") return;
 
-  return document.cookie
-    .split("; ")
-    .find((row) => row.includes(name))
+  return getCookieValue(document.cookie, name);
+}
+
+function getCookieValue(cookie: string | undefined, name: string) {
+  return cookie
+    ?.split("; ")
+    ?.find((row) => row.includes(name))
     ?.split("=")[1];
 }
 
