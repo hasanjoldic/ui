@@ -7,15 +7,11 @@ import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
-interface Props {
-  pages: {
-    path: string;
-    label: string;
-  }[];
-  onNavigate: (path: string) => void;
-}
+import { usePageContext } from "../page/context";
 
-export const DrawerButton: React.FC<Props> = ({ pages, onNavigate }) => {
+export const DrawerButton = () => {
+  const { pages, onNavigate } = usePageContext();
+
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpen = (event: React.MouseEvent<HTMLElement>) => {

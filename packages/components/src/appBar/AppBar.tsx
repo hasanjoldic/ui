@@ -7,20 +7,18 @@ import Button from "@mui/material/Button";
 
 import { PaletteModeButton } from "@hasan.joldic/theme";
 
+import { usePageContext } from "../page/context";
+
 import { LogoAndTitle } from "./LogoAndTitle";
 import { DrawerButton } from "./DrawerButton";
 
-interface Props extends React.ComponentProps<typeof DrawerButton> {}
-
-export const AppBar: React.FC<Props> = ({ pages, onNavigate }) => {
-  const handleNavigate = (path: string) => () => {
-    onNavigate(path);
-  };
+export const AppBar: React.FC = () => {
+  const { pages, onNavigate } = usePageContext();
 
   return (
     <MuiAppBar position="static" color="transparent" elevation={1} square>
       <Toolbar disableGutters>
-        <DrawerButton pages={pages} onNavigate={onNavigate} />
+        <DrawerButton />
 
         <LogoAndTitle />
 
@@ -32,7 +30,7 @@ export const AppBar: React.FC<Props> = ({ pages, onNavigate }) => {
           }}
         >
           {pages.map(({ path, label }) => (
-            <Button key={path} onClick={handleNavigate(path)}>
+            <Button key={path} onClick={() => onNavigate(path)}>
               {label}
             </Button>
           ))}

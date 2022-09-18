@@ -2,8 +2,9 @@ import React from "react";
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Page } from "./Page";
 import { ThemeProvider } from "@hasan.joldic/theme";
+
+import { Page } from "./Page";
 
 export default {
   title: "Page",
@@ -11,7 +12,7 @@ export default {
 } as ComponentMeta<typeof Page>;
 
 const Template: ComponentStory<typeof Page> = (args) => (
-  <ThemeProvider>
+  <ThemeProvider cookie={undefined}>
     <Page {...args} />
   </ThemeProvider>
 );

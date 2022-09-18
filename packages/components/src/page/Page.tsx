@@ -5,7 +5,9 @@ import Box from "@mui/material/Box";
 
 import { AppBar } from "../appBar";
 import { Footer } from "../footer";
+
 import { PageContent } from "./PageContent";
+import { IPageContext, PageContext } from "./context";
 
 const Container = styled(Box)(() => ({
   minHeight: "100vh",
@@ -13,15 +15,16 @@ const Container = styled(Box)(() => ({
   flexDirection: "column",
 }));
 
-interface Props
-  extends React.PropsWithChildren<React.ComponentProps<typeof AppBar>> {}
+interface Props extends React.PropsWithChildren<IPageContext> {}
 
 export const Page: React.FC<Props> = ({ pages, onNavigate, children }) => {
   return (
-    <Container>
-      <AppBar pages={pages} onNavigate={onNavigate} />
-      <PageContent>{children}</PageContent>
-      <Footer />
-    </Container>
+    <PageContext.Provider value={{ pages, onNavigate }}>
+      <Container>
+        <AppBar />
+        <PageContent>{children}</PageContent>
+        <Footer />
+      </Container>
+    </PageContext.Provider>
   );
 };

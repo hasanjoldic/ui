@@ -5,8 +5,11 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
 import { Logo } from "../logo";
+import { usePageContext } from "../page/context";
 
 export const LogoAndTitle: React.FC = () => {
+  const { onNavigate } = usePageContext();
+
   return (
     <Box
       mx={2}
@@ -15,7 +18,7 @@ export const LogoAndTitle: React.FC = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Link href="/" underline="none" color="inherit">
+      <Link underline="none" color="inherit" onClick={() => onNavigate("/")}>
         <Box display="flex" alignItems="center">
           <Box mr={2}>
             <Logo />
