@@ -9,15 +9,34 @@ import { Footer } from "../footer";
 import { PageContent } from "./PageContent";
 import { IPageContext, PageContext } from "./context";
 
+const pages = [
+  {
+    path: "https://hasanjoldic.com",
+    label: "Home",
+  },
+  {
+    path: "https://notes.hasanjoldic.com",
+    label: "Notes",
+  },
+  {
+    path: "https://images.hasanjoldic.com",
+    label: "Images",
+  },
+  {
+    path: "https://static.hasanjoldic.com/hasanjoldic.com/HasanJoldic_CV.pdf",
+    label: "Resume",
+  },
+];
+
 const Container = styled(Box)(() => ({
   minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
 }));
 
-interface Props extends React.PropsWithChildren<IPageContext> {}
+interface Props extends React.PropsWithChildren<Omit<IPageContext, "pages">> {}
 
-export const Page: React.FC<Props> = ({ pages, onNavigate, children }) => {
+export const Page: React.FC<Props> = ({ onNavigate, children }) => {
   return (
     <PageContext.Provider value={{ pages, onNavigate }}>
       <Container>

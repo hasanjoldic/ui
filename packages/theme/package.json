@@ -1,5 +1,5 @@
 {
-  "name": "@hasan.joldic/theme",
+  "name": "@hasanjoldic/theme",
   "version": "0.4.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
