@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/nextjs@0.2.1...@hasanjoldic/nextjs@0.2.2) (2022-09-19)
+
+**Note:** Version bump only for package @hasanjoldic/nextjs
+
+
+
+
+
 ## [0.2.1](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/nextjs@0.2.0...@hasanjoldic/nextjs@0.2.1) (2022-09-19)
 
 
