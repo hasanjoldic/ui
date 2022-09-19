@@ -13,14 +13,14 @@
   },
   "author": "Hasan Joldic <office@hasanjoldic.com> (https://hasanjoldic.com/)",
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "@babel/core": "^7.0.0",
-    "@emotion/react": "^11.0.0",
-    "@emotion/styled": "^11.0.0",
-    "@mui/icons-material": "^5.0.0",
-    "@mui/material": "^5.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
@@ -32,6 +32,8 @@
     "@storybook/manager-webpack4": "^6.5.11",
     "@storybook/react": "^6.5.11",
     "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^18.0.19",
+    "@types/react-dom": "^18.0.6",
     "babel-loader": "^8.2.5",
     "storybook-addon-cookie": "^1.0.4"
   }

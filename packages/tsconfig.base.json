@@ -1,0 +1,9 @@
+{
+  "extends": "@tsconfig/node16",
+
+  "compilerOptions": {
+    "lib": ["es2021", "dom"],
+    "jsx": "react-jsx",
+    "declaration": true
+  }
+}
