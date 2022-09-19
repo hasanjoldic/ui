@@ -142,7 +142,7 @@ type EnhancedAppType = NextComponentType<
   EnhancedAppPropsType
 >;
 
-const App: EnhancedAppType = ({ Component, pageProps, cookie }) => {
+export const App: EnhancedAppType = ({ Component, pageProps, cookie }) => {
   const router = useRouter();
 
   const handleNavigate = (path: string) => {
@@ -178,5 +178,3 @@ App.getInitialProps = async (
 
   return { pageProps, cookie };
 };
-
-export default App;

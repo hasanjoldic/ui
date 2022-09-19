@@ -109,7 +109,7 @@ import {
   NextScript,
 } from "next/document";
 
-export default class Document extends NextDocument {
+export class Document extends NextDocument {
   render() {
     return (
       <Html lang="en">
