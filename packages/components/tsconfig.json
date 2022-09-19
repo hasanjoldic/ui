@@ -1,11 +1,15 @@
 {
-  "extends": "@tsconfig/node16",
+  "extends": "../tsconfig.base.json",
+
+  "references": [{ "path": "../theme" }],
+
   "compilerOptions": {
+    "composite": true,
+
     "rootDir": "src",
-    "outDir": "dist",
-    "jsx": "react",
-    "declaration": true
+    "outDir": "dist"
   },
+
   "include": ["src"],
   "exclude": ["**/*.stories.tsx"]
 }

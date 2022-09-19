@@ -3,6 +3,7 @@ import React from "react";
 import styled from "@mui/material/styles/styled";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
 import AlternateEmail from "@mui/icons-material/AlternateEmail";
@@ -10,7 +11,6 @@ import GitHub from "@mui/icons-material/GitHub";
 import Home from "@mui/icons-material/Home";
 
 import { Logo } from "../logo";
-import { Typography } from "@mui/material";
 
 const Container = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),

@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 
-import { PaletteModeButton } from "@hasan.joldic/theme";
+import { PaletteModeButton } from "@hasanjoldic/theme";
 
 import { usePageContext } from "../page/context";
 

@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 
 import { ComponentStory } from "@storybook/react";
 
-import { ThemeProvider } from "@hasan.joldic/theme";
+import { ThemeProvider } from "@hasanjoldic/theme";
 
 import { EmailField } from "./Email";
 import { PasswordField } from "./Password";

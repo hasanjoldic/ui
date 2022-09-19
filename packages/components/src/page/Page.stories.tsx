@@ -2,7 +2,7 @@ import React from "react";
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { ThemeProvider } from "@hasan.joldic/theme";
+import { ThemeProvider } from "@hasanjoldic/theme";
 
 import { Page } from "./Page";
 
@@ -12,16 +12,9 @@ export default {
 } as ComponentMeta<typeof Page>;
 
 const Template: ComponentStory<typeof Page> = (args) => (
-  <ThemeProvider cookie={undefined}>
+  <ThemeProvider>
     <Page {...args} />
   </ThemeProvider>
 );
 
 export const Primary = Template.bind({});
-Primary.args = {
-  pages: ["Notes", "Resume", "Javni konkursi", "Music"].map((o) => ({
-    path: o,
-    label: o,
-  })),
-  onNavigate: () => {},
-};
