@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/theme@0.5.1...@hasanjoldic/theme@0.6.0) (2022-09-19)
+
+
+### Features
+
+* **theme:** remove top props ([475f0bf](https://github.com/hasanjoldic/ui/commit/475f0bf3316c337d5ffcb5bcf0b40acb1a3ee3a1))
+
+
+
+
+
 ## [0.5.1](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/theme@0.5.0...@hasanjoldic/theme@0.5.1) (2022-09-19)
 
 **Note:** Version bump only for package @hasanjoldic/theme
