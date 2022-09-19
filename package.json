@@ -7,9 +7,9 @@
   "scripts": {
     "test": "echo \"Error: TODO add tests\"",
     "clean": "lerna run clean && lerna clean --yes && rm -rf node_modules",
-    "bootstrap": "lerna bootstrap --registry https://npm.pkg.github.com/hasanjoldic",
+    "bootstrap": "lerna bootstrap",
     "version": "lerna version --conventional-commits --yes",
-    "publish": "lerna publish from-package --registry https://npm.pkg.github.com/hasanjoldic --yes"
+    "publish": "lerna publish from-package --yes"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0"
