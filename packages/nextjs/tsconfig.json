@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.base.json",
+
+  "references": [{ "path": "../theme" }, { "path": "../components" }],
+
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+
+  "include": ["src"],
+  "exclude": ["**/*.stories.tsx"]
+}
