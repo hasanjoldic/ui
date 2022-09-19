@@ -21,11 +21,11 @@ const themeOptions = {
 };
 
 export interface ThemeProviderProps extends React.PropsWithChildren {
-  // cookie: string | undefined;
+  cookie: string | undefined;
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
-  // cookie,
+  cookie,
   children,
 }) => {
   const initialPaletteMode = useMemo<PaletteMode>(() => {
@@ -37,10 +37,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     //   }
     // }
 
-    // const paletteMode = getCookieValue(cookie, "paletteMode");
-    // if (paletteMode === "light" || paletteMode === "dark") {
-    //   return paletteMode;
-    // }
+    const paletteMode = getCookieValue(cookie, "paletteMode");
+    if (paletteMode === "light" || paletteMode === "dark") {
+      return paletteMode;
+    }
 
     return "light";
   }, []);

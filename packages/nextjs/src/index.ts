@@ -1,2 +1,2 @@
-export { App } from "./App";
-export { Document } from "./Document";
+export * from "./App";
+export * from "./Document";
