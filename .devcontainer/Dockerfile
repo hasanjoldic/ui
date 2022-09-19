@@ -12,4 +12,4 @@ RUN apt install curl -y
 RUN curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
 RUN bash /tmp/nodesource_setup.sh
 RUN apt install -y nodejs
-RUN npm install lerna --global
+RUN npm install lerna commitizen --global
