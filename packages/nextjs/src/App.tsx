@@ -56,16 +56,15 @@ export const App: EnhancedAppType = ({
       </Head>
       <ThemeProvider>
         <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
 
-      <Box>
-        <Page onNavigate={onNavigate}>
-          <Content>
-            <Component {...pageProps} />
-          </Content>
-        </Page>
-      </Box>
+        <Box>
+          <Page onNavigate={onNavigate}>
+            <Content>
+              <Component {...pageProps} />
+            </Content>
+          </Page>
+        </Box>
+      </ThemeProvider>
     </CacheProvider>
   );
 };
