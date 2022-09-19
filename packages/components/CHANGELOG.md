@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.2](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/components@0.6.1...@hasanjoldic/components@0.6.2) (2022-09-19)
+
+**Note:** Version bump only for package @hasanjoldic/components
+
+
+
+
+
 ## [0.6.1](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/components@0.6.0...@hasanjoldic/components@0.6.1) (2022-09-19)
 
 **Note:** Version bump only for package @hasanjoldic/components
