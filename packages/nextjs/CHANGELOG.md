@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/nextjs@0.2.3...@hasanjoldic/nextjs@0.2.4) (2022-09-19)
+
+
+### Bug Fixes
+
+* **nextjs:** bump minor version ([3c254b9](https://github.com/hasanjoldic/ui/commit/3c254b9710eea0af6026e0df022da20b1e7f773f))
+* **nextjs:** use named exports ([5b71f8f](https://github.com/hasanjoldic/ui/commit/5b71f8fed9a4985ac1b961394c4e551da7308af0))
+
+
+
+
+
 ## [0.2.3](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/nextjs@0.2.2...@hasanjoldic/nextjs@0.2.3) (2022-09-19)
 
 **Note:** Version bump only for package @hasanjoldic/nextjs
