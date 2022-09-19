@@ -12,7 +12,7 @@
     "prepublish": "npm run build",
     "build-storybook": "build-storybook"
   },
-  "author": "Hasan Joldic <hasan@hasanjoldic.com> (https://hasanjoldic.com/)",
+  "author": "Hasan Joldic <office@hasanjoldic.com> (https://hasanjoldic.com/)",
   "license": "MIT",
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -37,8 +37,5 @@
     "@types/react": "^18.0.19",
     "@types/react-dom": "^18.0.6",
     "babel-loader": "^8.2.5"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

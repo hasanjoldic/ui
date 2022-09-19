@@ -11,7 +11,7 @@
     "build-storybook": "build-storybook",
     "prepublish": "npm run build"
   },
-  "author": "Hasan Joldic <hasan@hasanjoldic.com> (https://hasanjoldic.com/)",
+  "author": "Hasan Joldic <office@hasanjoldic.com> (https://hasanjoldic.com/)",
   "license": "MIT",
   "peerDependencies": {
     "@babel/core": "^7.0.0",
@@ -34,8 +34,5 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
     "storybook-addon-cookie": "^1.0.4"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
