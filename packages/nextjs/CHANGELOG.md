@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/nextjs@0.2.0...@hasanjoldic/nextjs@0.2.1) (2022-09-19)
+
+
+### Bug Fixes
+
+* **nextjs:** remove duplicate component ([4f967fa](https://github.com/hasanjoldic/ui/commit/4f967faa1911602bd72ebc2f1ac95f373d2b8683))
+
+
+
+
+
 # 0.2.0 (2022-09-19)
 
 
