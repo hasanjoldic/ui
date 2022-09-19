@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist tsconfig.tsbuildinfo",
-    "build": "npm run clean && tsc",
+    "prebuild": "npm run clean",
+    "build": "tsc",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prepublish": "npm run build"
