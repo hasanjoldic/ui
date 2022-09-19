@@ -7,6 +7,7 @@
   "scripts": {
     "test": "echo \"Error: TODO add tests\"",
     "clean": "lerna run clean && lerna clean --yes && rm -rf node_modules",
+    "bootstrap": "lerna bootstrap --registry https://npm.pkg.github.com/hasanjoldic",
     "version": "lerna version --conventional-commits --yes",
     "publish": "lerna publish from-package --registry https://npm.pkg.github.com/hasanjoldic --yes"
   },
