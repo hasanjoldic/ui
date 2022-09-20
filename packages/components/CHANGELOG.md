@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/components@0.6.2...@hasanjoldic/components@0.7.0) (2022-09-20)
+
+
+### Features
+
+* **components:** make `pages` props optional and define default value ([ef71c9b](https://github.com/hasanjoldic/ui/commit/ef71c9be84316525c6b75bda2cf183be395b0a87))
+
+
+
+
+
 ## [0.6.2](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/components@0.6.1...@hasanjoldic/components@0.6.2) (2022-09-19)
 
 **Note:** Version bump only for package @hasanjoldic/components
