@@ -15,9 +15,35 @@ const Container = styled(Box)(() => ({
   flexDirection: "column",
 }));
 
-interface Props extends React.PropsWithChildren<IPageContext> {}
+const defaultPages = [
+  {
+    path: "https://hasanjoldic.com",
+    label: "Home",
+  },
+  {
+    path: "https://notes.hasanjoldic.com",
+    label: "Notes",
+  },
+  {
+    path: "https://images.hasanjoldic.com",
+    label: "Images",
+  },
+  {
+    path: "https://static.hasanjoldic.com/hasanjoldic.com/HasanJoldic_CV.pdf",
+    label: "Resume",
+  },
+];
 
-export const Page: React.FC<Props> = ({ pages, onNavigate, children }) => {
+interface Props
+  extends React.PropsWithChildren<
+    Omit<IPageContext, "pages"> & Partial<Pick<IPageContext, "pages">>
+  > {}
+
+export const Page: React.FC<Props> = ({
+  pages = defaultPages,
+  onNavigate = () => {},
+  children,
+}) => {
   return (
     <PageContext.Provider value={{ pages, onNavigate }}>
       <Container>
