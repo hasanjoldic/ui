@@ -1,6 +1,6 @@
 {
   "name": "@hasanjoldic/nextjs",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -18,8 +18,8 @@
     "@emotion/react": "^11.10.4",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.4",
-    "@hasanjoldic/components": "^0.7.0",
-    "@hasanjoldic/theme": "^0.6.2",
+    "@hasanjoldic/components": "^0.7.1",
+    "@hasanjoldic/theme": "^0.6.3",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.5",
     "next": "^12.0.0",
