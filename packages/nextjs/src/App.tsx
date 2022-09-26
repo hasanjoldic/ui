@@ -121,7 +121,7 @@ const pages = [
 ];
 
 const Content = styled("div")(({ theme }) => ({
-  maxWidth: theme.breakpoints.values.lg,
+  maxWidth: `min(100%, ${theme.breakpoints.values.lg}px)`,
 
   flexGrow: 1,
   display: "flex",
