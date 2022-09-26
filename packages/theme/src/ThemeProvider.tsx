@@ -21,7 +21,7 @@ const themeOptions = {
 };
 
 export interface ThemeProviderProps extends React.PropsWithChildren {
-  cookie: string | undefined;
+  cookie?: string;
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
