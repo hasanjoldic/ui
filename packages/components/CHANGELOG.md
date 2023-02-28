@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/components@0.7.1...@hasanjoldic/components@0.7.2) (2023-02-28)
+
+
+### Bug Fixes
+
+* mui styles imports ([9908941](https://github.com/hasanjoldic/ui/commit/99089419fa511586b757f29f4fd95f11cb619ff3))
+
+
+
+
+
 ## [0.7.1](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/components@0.7.0...@hasanjoldic/components@0.7.1) (2022-09-26)
 
 **Note:** Version bump only for package @hasanjoldic/components

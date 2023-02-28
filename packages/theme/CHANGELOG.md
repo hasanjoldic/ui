@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.4](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/theme@0.6.3...@hasanjoldic/theme@0.6.4) (2023-02-28)
+
+
+### Bug Fixes
+
+* mui styles imports ([9908941](https://github.com/hasanjoldic/ui/commit/99089419fa511586b757f29f4fd95f11cb619ff3))
+
+
+
+
+
 ## [0.6.3](https://github.com/hasanjoldic/ui/compare/@hasanjoldic/theme@0.6.2...@hasanjoldic/theme@0.6.3) (2022-09-26)
 
 **Note:** Version bump only for package @hasanjoldic/theme
