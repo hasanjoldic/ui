@@ -1,9 +1,11 @@
 import { useState, useEffect, useMemo } from "react";
 
-import muiCreateTheme from "@mui/material/styles/createTheme";
+import {
+  createTheme as muiCreateTheme,
+  ThemeProvider as MuiThemeProvider,
+} from "@mui/material/styles";
+import type { ThemeOptions } from "@mui/material/styles";
 import type { PaletteMode } from "@mui/material";
-import type { ThemeOptions } from "@mui/material/styles/createTheme";
-import MuiThemeProvider from "@mui/material/styles/ThemeProvider";
 
 import { ThemeContext } from "./hooks";
 

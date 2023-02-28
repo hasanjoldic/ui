@@ -1,6 +1,6 @@
 import React from "react";
 
-import useTheme from "@mui/material/styles/useTheme";
+import {useTheme} from "@mui/material/styles";
 
 import { usePageContext } from "../page/context";
 
