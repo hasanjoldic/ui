@@ -6,7 +6,7 @@
 
 // import { CacheProvider, EmotionCache } from "@emotion/react";
 
-// import styled from "@mui/material/styles/styled";
+// import { styled } from "@mui/material/styles";
 // import CssBaseline from "@mui/material/CssBaseline";
 // import Box from "@mui/material/Box";
 
@@ -94,7 +94,7 @@ import { default as NextApp, AppContext, AppInitialProps } from "next/app";
 import { NextComponentType } from "next";
 import { AppContextType, AppPropsType } from "next/dist/shared/lib/utils";
 
-import styled from "@mui/material/styles/styled";
+import { styled } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 
